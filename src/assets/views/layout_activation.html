@@ -1,0 +1,48 @@
+<!-- Register Content -->
+<div class="content overflow-hidden">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+            <!-- Register Block -->
+            <div class="block block-themed animated fadeIn">
+                <div class="block-header bg-success">
+                    <ul class="block-options">
+                        <li>
+                            <a data-ui-sref="login" data-toggle="tooltip" data-placement="left" title="Log In"><i class="si si-login"></i></a>
+                        </li>
+                    </ul>
+                    <h3 class="block-title">User Activation</h3>
+                </div>
+                <div class="block-content block-content-full block-content-narrow">
+                    <!-- Register Title -->
+                    <div style="text-align: center;">
+                        <img src="assets/img/0000001-300x95.png" style="width:200px;"/>
+                        <p>Account activation.</p>
+                    </div>
+                    <!-- END Register Title -->
+                    <div style="text-align: center" ng-show="loadingTracker.active()">
+                        <i  class="fa fa-4x fa-cog fa-spin text-warning"></i>
+                    </div>
+                    <div style="text-align: center" ng-show="expiredToken">
+                        <i  class="fa fa-4x fa-warning text-danger"></i>
+                        <h4>Your activation code is expired, please go to <a data-ui-sref="resend">Resend Activation Code</a>.</h4>
+                    </div>
+                    <div style="text-align: center" ng-show="success">
+                        <i  class="fa fa-4x fa-check text-success"></i>
+                        <h4>Activation Successfull.</h4>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+            <!-- END Register Block -->
+        </div>
+    </div>
+</div>
+<!-- END Register Content -->
+
+<!-- Register Footer -->
+<div class="push-10-t text-center animated fadeInUp">
+    <small class="text-muted font-w600" ng-bind-html="copyright"></small>
+</div>
+<!-- END Register Footer -->

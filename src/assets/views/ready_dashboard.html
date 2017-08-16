@@ -1,0 +1,180 @@
+<!-- Page Header -->
+<div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
+    <div class="push-50-t push-15">
+        <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
+        <h2 class="h5 text-white-op animated zoomIn">Welcome {{displayName}}</h2>
+    </div>
+</div>
+<!-- END Page Header -->
+
+<!-- Stats -->
+<div class="content bg-white border-b">
+    <div class="row items-push text-uppercase">
+        <div class="col-xs-6 col-sm-3">
+            <table>
+                <tbody>
+                <tr>
+                    <td class="font-w600 text-right" style="width: 30px;" colspan="2">
+                        <span class="text-black">Crowdsale Price</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-w600" style="width: 30px;">
+                        <img class="img-avatar" src="assets/img/avatars/NatcoinAvatar.png" alt="">
+                    </td>
+                    <td class="hidden-xs h6 text-muted text-right" style="width: 200px;">
+                        <span class="h3 font-w300 text-primary animated flipInX">1</span>
+                        ETH =
+                        <span class="h3 font-w300 text-primary animated flipInX">300</span>
+                        NTC
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-6 col-sm-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">USD</div>
+            <a class="h2 font-w300 text-primary animated flipInX" href="javascript:void(0)">{{cursUSD}}</a>
+        </div>
+        <div class="col-xs-6 col-sm-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">EUR</div>
+            <a class="h2 font-w300 text-primary animated flipInX" href="javascript:void(0)">{{cursEUR}}</a>
+        </div>
+        <div class="col-xs-6 col-sm-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">BTC</div>
+            <a class="h2 font-w300 text-primary animated flipInX" href="javascript:void(0)">{{cursBTC}}</a>
+        </div>
+        <div class="col-xs-6 col-sm-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">ETH</div>
+            <a class="h2 font-w300 text-primary animated flipInX" href="javascript:void(0)">{{cursETH}}</a>
+        </div>
+    </div>
+</div>
+<!-- END Stats -->
+
+<div class="content">
+    <!--<h2 class="content-heading">Lending Nat Coin</h2>-->
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Benefit Scrollbar -->
+            <div class="block">
+                <div class="block-header">
+                    <h3 class="block-title">Natcoin Business Plan &  Benefit </h3>
+                </div>
+                <div class="block-content block-content-full">
+                    <!-- SlimScroll Container -->
+                    <div data-js-slimscroll>
+                        <p>You will benefit by owning and using natcoin because the features provided by natcoin greatly benefit both you as a natcoin user who is active in transactions or for those of you who buy and own natcoin as your personal investment assets and instruments</p>
+                        <p>The features provided are very interesting namely Autobot 0.80% where your equity or asset coins accumulate and 0.80% lop. Not only there you will get Lend profit from 3% - 7% per week (from the value of the asset coins in lending).</p>
+                    </div>
+                    <!-- END SlimScroll Container -->
+                </div>
+            </div>
+            <!-- END Benefit Scrollbar -->
+
+            <!-- Benefit Scrollbar -->
+            <div class="block" ng-class="{'block-opt-refresh' : loadingTotalSupply.active()}">
+                <div class="block-header">
+                    <h3 class="block-title">Natcoin Crowdsale Statistic</h3>
+                </div>
+                <div class="block-content block-content-full">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                            <!-- Success Alert -->
+                            <div class="alert alert-success alert-dismissable">
+                                <h3 class="font-w300 push-15"><i class="fa cc-ETH"></i> Received / Cap</h3>
+                                <h1 class="font-w300 push-15">0 / 10000</h1>
+                                <p>Sale Supply</p>
+                            </div>
+                            <!-- END Success Alert -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <!-- Info Alert -->
+                            <div class="alert alert-info alert-dismissable">
+                                <h5 class="font-w300 push-15"><img src="assets/img/favicons/favicon-32x32.png"></img> Total Token Purchase</h5>
+                                <h1 class="font-w300 push-15">0</h1>
+                                <p>Natcoin Token</p>
+                            </div>
+                            <!-- END Info Alert -->
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <!-- Warning Alert -->
+                            <div class="alert alert-warning alert-dismissable">
+                                <h4 class="font-w300 push-15"><i class="fa fa-clock-o"></i> Crowdsale End After</h4>
+                                <h1 class="font-w300 push-15">10 Sep 2017</h1>
+                                <p>&nbsp;</p>
+                            </div>
+                            <!-- END Warning Alert -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Benefit Scrollbar -->
+
+        </div>
+        <div class="col-lg-4">
+            <div class="block block-bordered">
+                <div class="block-header">
+                    <ul class="block-options">
+                        <li>
+                            <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"><i class="si si-size-fullscreen"></i></button>
+                        </li>
+                        <li>
+                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                        </li>
+                        <li>
+                            <button type="button" data-toggle="block-option" data-action="content_toggle"><i class="si si-arrow-up"></i></button>
+                        </li>
+                    </ul>
+                    <h3 class="block-title">Referal</h3>
+                </div>
+                <div class="block-content">
+                    <div class="pull-r-l pull-t push">
+                        <table class="block-table text-center bg-gray-lighter border-b">
+                            <tbody>
+                            <tr>
+                                <td class="border-r" style="width: 50%;">
+                                    <div class="h1 font-w700">{{referalInformation.uplineCounter}}</div>
+                                    <div class="h5 text-muted text-uppercase push-5-t">Upline</div>
+                                </td>
+                                <td>
+                                    <div class="h1 font-w700">{{referalInformation.downlineCounter}}</div>
+                                    <div class="h5 text-muted text-uppercase push-5-t">Downline</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="nav-users push">
+                        <li>
+                            <a data-ui-sref="referal">
+                                <img class="img-avatar" src="assets/img/avatars/avatar7.jpg" alt="">
+                                <i class="fa fa-circle text-success"></i> LEVEL #1
+                                <div class="font-w400 text-muted"><small>{{referalInformation.totalCommission.lvl1}} NTC</small></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-ui-sref="referal">
+                                <img class="img-avatar" src="assets/img/avatars/avatar10.jpg" alt="">
+                                <i class="fa fa-circle text-success"></i> LEVEL #2
+                                <div class="font-w400 text-muted"><small>{{referalInformation.totalCommission.lvl2}} NTC</small></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-ui-sref="referal">
+                                <img class="img-avatar" src="assets/img/avatars/avatar5.jpg" alt="">
+                                <i class="fa fa-circle text-success"></i> LEVEL #3
+                                <div class="font-w400 text-muted"><small>{{referalInformation.totalCommission.lvl3}} NTC</small></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Content -->
+<div class="content">
+</div>
+<!-- END Page Content -->

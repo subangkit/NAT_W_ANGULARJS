@@ -1,0 +1,60 @@
+<div class="block block-themed block-transparent remove-margin-b">
+    <div class="block-header bg-primary-dark">
+        <ul class="block-options">
+        </ul>
+        <h3 class="block-title">Claim your NTC</h3>
+    </div>
+    <div class="block-content">
+        <p><strong>Hi, {{$ctrl.displayName}}</strong>. this dialog box is to claim tranfered BTC to out bitcoin address.</p>
+        <form class="js-validation-modal-claim form-horizontal push-5-t" action="base_forms_premade.html" method="post"
+              onsubmit="return false;" ng-validate="$ctrl.validationOptions">
+            <div class="form-group">
+                <label class="col-xs-12" for="claim-currency">Crypto Currency</label>
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <select class="form-control" id="claim-currency" name="currency" ng-model="$ctrl.claim.currency" ng-options="item as item.name for item in $ctrl.currency" ng-change="$ctrl.changeRate(item)">
+                            <option value="">-- PLEASE SELECT --</option>
+                        </select>
+                        <span class="input-group-addon" ng-if="$ctrl.claim.currency.name == 'ETH'">USD {{$ctrl.currencyData.ETH.USD}}</span>
+                        <span class="input-group-addon" ng-if="$ctrl.claim.currency.name == 'BTC'">USD {{$ctrl.currencyData.BTC.USD}}</span>
+                        <span class="input-group-addon" ng-if="$ctrl.claim.currency.name == 'DASH'">USD {{$ctrl.currencyData.DASH.USD}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <label class="col-xs-12" for="claim-btcaddress">Your {{$ctrl.claim.currency.name}} Address</label>
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <input ng-model="$ctrl.claim.btcaddress" class="form-control" id="claim-btcaddress" name="btcaddress" placeholder="Enter your bitcoin address..">
+                        <span class="input-group-addon"><i class="fa fa-address-card-o"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-12" for="claim-amount">Amount</label>
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <input ng-model="$ctrl.claim.amount" class="form-control" id="claim-amount" name="amount" placeholder="Enter amount of transfer" ng-change="$ctrl.calculateNTC()">
+                        <span class="input-group-addon"><i class="fa fa-money"></i> {{$ctrl.claim.currency.symbol}}</span>
+                    </div>
+                    <div class="input-group">
+                        <input ng-model="$ctrl.ntc" disabled class="form-control">
+                        <span class="input-group-addon">NTC | RATE 1 {{$ctrl.claim.currency.symbol}} = $ {{$ctrl.claim.rate}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-12" for="claim-txhash">TransactionHash</label>
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <input ng-model="$ctrl.claim.txhash" class="form-control" id="claim-txhash" name="txhash" placeholder="Enter transaction hash">
+                        <span class="input-group-addon"><i class="fa fa-money"></i></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-primary" type="button" data-dismiss="modal" ng-click="$ctrl.ok()"><i class="fa fa-check"></i> Claim</button>
+</div>

@@ -1,0 +1,15 @@
+<ul ng-if="item.children && item.children.length > 0" class="sub-menu">
+
+    <li ng-repeat="item in item.children" >
+        <a href="{{item.href}}" >
+            <span class="title">{{item.name}}</span>
+        </a>
+
+        <div ng-switch on="item.subItems.length > 0">
+            <div ng-switch-when="true">
+                <div ng-init="subItems = item.children;" ng-include="'assets/views/partials/referal_new_recursive.html'"></div>
+            </div>
+        </div>
+
+    </li>
+</ul>

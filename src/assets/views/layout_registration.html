@@ -1,0 +1,1693 @@
+<!-- Register Content -->
+<div class="content overflow-hidden">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+            <!-- Register Block -->
+            <div class="block block-themed animated fadeIn">
+                <div class="block-header bg-success">
+                    <ul class="block-options">
+                        <li>
+                            <a style="cursor: pointer;" data-ui-sref="resend" data-toggle="tooltip" data-placement="left" title="Resend Registration Email">Resend</a>
+                        </li>
+                        <li>
+                            <a style="cursor: pointer;" data-toggle="modal" data-target="#modal-terms">View Terms</a>
+                        </li>
+                        <li>
+                            <a style="cursor: pointer;" data-ui-sref="login" data-toggle="tooltip" data-placement="left" title="Log In"><i class="si si-login"></i></a>
+                        </li>
+                    </ul>
+                    <h3 class="block-title">Register</h3>
+                </div>
+                <div class="block-content block-content-full block-content-narrow">
+                    <!-- Register Title -->
+                    <div style="text-align: center;">
+                        <img src="assets/img/0000001-300x95.png" style="width:200px;"/>
+                        <p>Please fill the following details to create a new account.</p>
+                    </div>
+                    <!-- END Register Title -->
+
+                    <!-- Register Form -->
+                    <!-- jQuery Validation (.js-validation-register class is initialized in js/pages/base_pages_register.js) -->
+                    <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
+                    <form class="js-validation-register form-horizontal push-50-t push-50">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="form-material form-material-success">
+                                    <input ng-model="register.name" class="form-control" type="text" id="register-username" name="register-username" placeholder="Please enter a username">
+                                    <label for="register-username">Username</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="form-material form-material-success">
+                                    <input ng-model="register.email" class="form-control" type="email" id="register-email" name="register-email" placeholder="Please provide your email">
+                                    <label for="register-email">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="form-material form-material-success">
+                                    <input ng-model="register.password" class="form-control" type="password" id="register-password" name="register-password" placeholder="Choose a strong password..">
+                                    <label for="register-password">Password</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="form-material form-material-success">
+                                    <input ng-model="register.confirmPassword" class="form-control" type="password" id="register-password2" name="register-password2" placeholder="..and confirm it">
+                                    <label for="register-password2">Confirm Password</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label class="css-input switch switch-sm switch-success">
+                                    <input ng-model="register.toc" ng-true-value="1" ng-false-value="0" type="checkbox" id="register-terms" name="register-terms"><span></span> I agree with terms &amp; conditions
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12 col-sm-6 col-md-5">
+                                <button ng-click="submitRegister(this)" class="btn btn-block btn-success"><i  class="fa fa-cog fa-spin text-warning" ng-show="loadingTracker.active()"></i><i class="fa fa-plus pull-right"></i> Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END Register Form -->
+                </div>
+            </div>
+            <!-- END Register Block -->
+        </div>
+    </div>
+</div>
+<!-- END Register Content -->
+
+<!-- Terms Modal -->
+<div class="modal fade" id="modal-terms" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-popout">
+        <div class="modal-content">
+            <div class="block block-themed block-transparent remove-margin-b">
+                <div class="block-header bg-primary-dark">
+                    <ul class="block-options">
+                        <li>
+                            <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+                        </li>
+                    </ul>
+                    <h3 class="block-title">Terms &amp; Conditions</h3>
+                </div>
+                <div class="block-content">
+                    <p>
+                        NATCOIN (the Platform) is a virtual platform that provides
+                        one-stop-solution Services enabling storage, transfer, obtaining,
+                        exchanging, trading and spending Crypto and Fiat currencies. If you wish to
+                        register, and convey transactions on the Platform, please read and
+                        understand these Terms and Conditions (the Terms).
+                    </p>
+                    <p>
+                        These Terms define an electronic agreement between you (the User) and
+                        NATCOIN PTE LTD (the Company) governing your use of the coss.io website
+                        (the Site or the Platform), and the services, products and content (the
+                        Services) it provides.
+                    </p>
+                    <p>
+                        The collective name coss.io refers to the Company including its owners,
+                        directors, investors, employees and/or other related parties.
+                    </p>
+                    <p>
+                        These Terms must be carefully considered by the User prior to accessing the
+                        Site, its functions and Services. Users are required to read these Terms
+                        attentively, understand them and agree to them before starting to utilize
+                        the Site and the Services.
+                    </p>
+                    <p>
+                        It is the User's sole responsibility to understand and comply with the
+                        laws, rules and regulations in his/her legal jurisdiction that may apply to
+                        the use of the Site and the Services.
+                    </p>
+                    <p>
+                        By accessing the Site and the Services you agree to accept these Terms.
+                    </p>
+                    <p>
+                        IN CASE YOU DO NOT AGREE TO ACCEPT THESE TERMS, YOU MUST NOT ACCESS THE
+                        SITE AND THE COSS.IO SERVICES.
+                    </p>
+                    <p>
+                        1. Definitions
+                    </p>
+                    <p>
+                        1.1. The capitalized terms mentioned in these Terms and Conditions should
+                        be understood in accordance with the following definitions, and can be used
+                        in the singular alongside the plural form whenever it is needed.
+                    </p>
+                    <p>
+                        1.1.1. User, a person/entity, who uses the NATCOIN Services having read and
+                        agreed to the Terms, and is a holder of an Account.
+                    </p>
+                    <p>
+                        1.1.2. Account, a profile registered by the User on the NATCOIN Platform.
+                    </p>
+                    <p>
+                        1.1.3. Wallet, an application allowing the User to store his/her Funds in
+                        Crypto and Fiat currency on the Platform.
+                    </p>
+                    <p>
+                        1.1.4. Service, all and any services provided by natcoin.io
+                    </p>
+                    <p>
+                        1.1.5. Site, the NATCOIN website at https://natcoin.io
+                    </p>
+                    <p>
+                        1.1.6. Buyer, the User who submits an Order to buy Crypto or fiat
+                        currencies through the Platform.
+                    </p>
+                    <p>
+                        1.1.7. Commission, a fee charged by or on behalf of any third party (e.g.
+                        bank, financial institution, payment service provider, etc.).
+                    </p>
+                    <p>
+                        1.1.8. Cryptocurrency, peer-to-peer decentralized digital representation of
+                        value (e.g. bitcoin, ether, litecoin, etc.).
+                    </p>
+                    <p>
+                        1.1.9. Fiat currency, a government-issued currency designated as a legal
+                        tender in its country of issuance through government decree, regulation, or
+                        law.
+                    </p>
+                    <p>
+                        1.1.10. Funds - Crypto or Fiat currency.
+                    </p>
+                    <p>
+                        1. 1. 11. Deposit, transferring Funds to the Account.
+                    </p>
+                    <p>
+                        1.1.12. Order, a User’s instruction to buy or sell Cryptocurrency under
+                        certain conditions.
+                    </p>
+                    <p>
+                        1.1.13. Seller, the User who submits an Order to sell Cryptocurrencies on
+                        the Platform.
+                    </p>
+                    <p>
+                        1.1.14.Transaction is the process of transferring, depositing, trading
+                        and/or withdrawing Crypto or Fiat currencies by the User to/from his/her
+                        Account.
+                    </p>
+                    <p>
+                        1.1.14.1. Transaction Fee, a charge which is payable to coss.io by the User
+                        for each completed Transaction.
+                    </p>
+                    <p>
+                        1.1.14.2. Transaction Cost, the total cost paid by the Buyer respectively
+                        for each Transaction performed via the Platform.
+                    </p>
+                    <p>
+                        1.1.15. Withdrawal, transferring Funds from the User’s Account to his/her
+                        bank account.
+                    </p>
+                    <p>
+                        2. General Terms
+                    </p>
+                    <p>
+                        2.1. The Services allow Users of the Platform to create and to accept
+                        Orders to trade Cryptocurrencies with the other Users.
+                    </p>
+                    <p>
+                        2.2. Each individual User’s place of residence determines the availability
+                        of the certain functions on the Site. It is the User’s sole responsibility
+                        to get informed about those rules and regulations in his/her place of
+                        residence and to abide by them.
+                    </p>
+                    <p>
+                        2.3. The User acknowledges and agrees that, whenever a Transaction takes
+                        place between him/her and the other User(s) coss.io presents an
+                        intermediary between the two parties, the Buyer and the Seller.
+                    </p>
+                    <p>
+                        3. User’s Responsibilities
+                    </p>
+                    <p>
+                        3.1. The User can access and use the Site and the Services having agreed to
+                        and complied with these Terms. Therefore, by entering the Site, the User
+                        agrees to accept and comply with the Terms stated herein.
+                    </p>
+                    <p>
+                        3.2. The User is responsible for reading, understanding and accepting these
+                        Terms prior to using the Site and the Services.
+                    </p>
+                    <p>
+                        3.3. The User must comply with the applicable laws and regulations related
+                        to the use of the Services in his/her legislation.
+                    </p>
+                    <p>
+                        3.4. The User is responsible for monitoring changes in his/her Account
+                        (e.g. the balance).
+                    </p>
+                    <p>
+                        3.5. The User is required to inform the Company immediately about any
+                        unusual or suspicious changes in his/her Account. In the case of failure to
+                        undertake this action or inaction the User is liable for the breach of the
+                        Terms and the agreement. In this situation, the Company has the right to
+                        take any further steps accordingly, including but not limited to reporting
+                        to the relevant legal authorities.
+                    </p>
+                    <p>
+                        3.6. The User acknowledges and agrees that the Transactions made on the
+                        Platform are executed on behalf and in the name of the Account owners
+                        acting as Buyers and Sellers. It is User’s sole responsibility to ensure
+                        the security of his/her Account details (e.g. password).
+                    </p>
+                    <p>
+                        3.7. The User is responsible for notifying the Company immediately of any
+                        unauthorized use of his/her Account, password, or any other breach of
+                        security of any nature by contacting <u>support@natcoin.io</u>. Any
+                        violation of the above-mentioned rules can lead to Account termination, and
+                        losses that such termination can incur.
+                    </p>
+                    <p>
+                        3.8. The User must not attempt to utilize the Site and Services to perform
+                        any kind of criminal activity (e.g. money laundering, illegal gambling
+                        operations, financing terrorist organizations, malicious hacking).
+                    </p>
+                    <p>
+                        3.9. The User is responsible for the damages caused to the Company and the
+                        liability actions brought against coss.io and coming into infringement with
+                        the third-party rights or into contradiction with the applicable laws.
+                    </p>
+                    <p>
+                        3.10. The User’s liability e.g. for fraud, death or personal injury caused
+                        by negligence, the breach of the agreement implied by the law, etc. may not
+                        be limited or excluded.
+                    </p>
+                    <p>
+                        3.11. It is Users’ sole responsibility to determine the appropriateness of
+                        any Transaction carried on the Platform due to personal goals, financial
+                        situation and willingness to risk.
+                    </p>
+                    <p>
+                        3.12. The payment instruments added to the User’s Account, e.g. a bank
+                        account, credit card, debit card, etc. must be named after the Account
+                        holder. The mismatch between the NATCOIN Account holder’s name and the name
+                        on the chosen payment instrument will be labelled by the Company as fraud.
+                    </p>
+                    <p>
+                        4. User’s Warranties
+                    </p>
+                    <p>
+                        4.1. By registering an Account on the NATCOIN Platform, the User warrants
+                        that he/she will follow the regulations and the laws of his/her country of
+                        residence and/or the country from which the Site and the Services are
+                        accessed by the User.
+                    </p>
+                    <p>
+                        4.2. The User warrants that he/she accepts these Terms. The User warrants
+                        that he/she has turned at least 18 years old possessing the legal right to
+                        accept these Terms and to initiate or to participate in Transactions
+                        carried out in Crypto and Fiat currencies.
+                    </p>
+                    <p>
+                        4.3. The User guarantees that he/she will use the Platform only to perform
+                        Transactions in accordance with the conditions outlined by these Terms
+                        granting that he/she is duly authorized to do so.
+                    </p>
+                    <p>
+                        4.4. The User warrants that Crypto and Fiat currency deposited to the
+                        NATCOIN Account are owned by the User and are derived from the legal
+                        sources.
+                    </p>
+                    <p>
+                        4.5. The User warrants that he/she will only withdraw Funds in Crypto and
+                        Fiat currency from the Wallet that he/she owns, in other case the Company
+                        is not liable for the consequences of such Withdrawal..
+                    </p>
+                    <p>
+                        4.6. The User warrants that he/she will not violate any laws, regulations
+                        and third-party rights by carrying out Transactions on the Platform.
+                    </p>
+                    <p>
+                        5. Company’s Responsibilities
+                    </p>
+                    <p>
+                        5.1. The Company has the right to suspend User’s Account and block his/her
+                        access to Funds in Crypto and Fiat currency stored in the Wallet linked to
+                        this Account if he/she doesn’t fulfill the rules prescribed by these Terms.
+                    </p>
+                    <p>
+                        5.2. The Company will do its utmost to provide Services efficiently,
+                        accurately and respectively with these Terms.
+                    </p>
+                    <p>
+                        5.3. The Company has limited responsibility to ensure the User’s receipt of
+                        the Funds transferred in Crypto and Fiat currency.
+                    </p>
+                    <p>
+                        5.4. The Company is not held responsible for any damages, losses (e.g. loss
+                        of profit, revenue, business, opportunity, data, etc.), direct, indirect or
+                        consequential, unless it is resulted by the breach of the Terms from the
+                        Company’s side.
+                    </p>
+                    <p>
+                        5.5. The Company is not responsible for any technical and/or network
+                        malfunction, breakdown, delay or interruption of Service causing the Site
+                        to be unavailable to Users at any point in time.
+                    </p>
+                    <p>
+                        5.6. In the case of fraud or suspicious activities the Company reserves the
+                        right to report all the necessary information (e.g. names, addresses, etc.)
+                        to the relevant authorities. .
+                    </p>
+                    <p>
+                        5.7. The Company may freeze User’s Account at any time upon request of any
+                        competent authority undertaking the investigation of a fraud or an illegal
+                        activity.
+                    </p>
+                    <p>
+                        5.8. The Company is not liable for any fraud, death or personal injury
+                        resulted by negligence, breach of these Terms prescribed by the law, or any
+                        other regulations excluded from the provision of the law.
+                    </p>
+                    <p>
+                        6. Company’s Warranties
+                    </p>
+                    <p>
+                        6.1. The Company warrants that it will provide the Services in accordance
+                        with the rules prescribed by these Terms.
+                    </p>
+                    <p>
+                        6.2. The Company guarantees anonymity to all Buyers and Sellers creating
+                        Orders on the Platform.
+                    </p>
+                    <p>
+                        6.3. The Company warrants that the Transaction Costs will be calculated
+                        from the actual matched Orders created by the Buyers and the Sellers
+                        participating in the bidding process on the Platform, summed with the
+                        applicable Transaction Fees.
+                    </p>
+                    <p>
+                        6.4. The Company warrants that once the buying and selling Orders match,
+                        they cannot be cancelled or reversed.
+                    </p>
+                    <p>
+                        6.5. Funds acquired after such Transaction are owned and stored by each
+                        User in his/her Wallet linked to the NATCOIN Account.
+                    </p>
+                    <p>
+                        7. Privacy Policy and Personal Information
+                    </p>
+                    <p>
+                        7.1. The Company will not disclose your private information, which may
+                        non-exhaustively include: personal particulars, financial details,
+                        correspondence with customer, employment details, tax and insurance
+                        information, banking information, risk profile, investment details, assets,
+                        etc. to other Users of the Platform.
+                    </p>
+                    <p>
+                        7.2. The confidentiality of your private information is safeguarded by
+                        firewalls and SSL, user interfaces (e.g. mobile apps), and server processes
+                        as prescribed by the industry standards.
+                    </p>
+                    <p>
+                        7.3. All security measures are vulnerable to attacks and break-in’s despite
+                        the measures taken by the Company to prevent the User's private information
+                        from disclosure.
+                    </p>
+                    <p>
+                        7.4. The Company gives no guarantee in the effectiveness of the measures
+                        and the Company’s ability to prevent the unlawful activities committed by
+                        other parties (e.g. accessing the private information of the Users).
+                    </p>
+                    <p>
+                        7.4.1. We, on behalf of the Company, will do our utmost to prevent any
+                        information leakage and unlawful activities.
+                    </p>
+                    <p>
+                        7.4.2. The Company does not guarantee that any personally-identifiable
+                        information provided by Users will not under any circumstances be disclosed
+                        to public.
+                    </p>
+                    <p>
+                        7.5. The Company will not share your information with the third parties
+                        except for disclosures upon lawful requests from the legal authorities and
+                        institutions or in accordance with the applicable laws.
+                    </p>
+                    <p>
+                        7.5.1. The Company can also share the User's Account details or the other
+                        information when it is necessary for law compliance purposes and for the
+                        sake of the Company’s interests or property protection.
+                    </p>
+                    <p>
+                        7.5.2. The User agrees that Privacy and Personal Information Policies may
+                        include sharing your information with the third parties e.g. companies,
+                        agents, governmental institutions and/or lawyers.
+                    </p>
+                    <p>
+                        8. Data Protection and Copyright
+                    </p>
+                    <p>
+                        8.1. All Content on the NATCOIN Platform is owned by the Company as
+                        intellectual property, and is subject to copyright.
+                    </p>
+                    <p>
+                        8.1.1. No part of the Content can be copied, distributed, modified,
+                        published, or transmitted by any means without the official permission of
+                        the Company and a reference to the Platform and/or the Site.
+                    </p>
+                    <p>
+                        8.1.2. Violating this policy can be considered as infringement of the
+                        Company’s intellectual property rights and can entail penalties of criminal
+                        and civil character.
+                    </p>
+                    <p>
+                        8.2. Note that this Agreement does not grant you any permission to use the
+                        Content.
+                    </p>
+                    <p>
+                        8.3. The Platform in its turn can make some of its content such as market
+                        data (the value and the other information related to digital currencies it
+                        supports) available to the public other than its Users.
+                    </p>
+                    <p>
+                        8.3.1. Having received access to such data, you as a User agree to abide by
+                        the Company’s copyright policy.
+                    </p>
+                    <p>
+                        8.3.2. The User will not redistribute, retransmit, duplicate, or otherwise
+                        make use of such data in an unlawful way by any means.
+                    </p>
+                    <p>
+                        8.3.3. Any distribution or transmission of the Platform’s live market data
+                        is considered as a material breach of this Agreement and the violation of
+                        these Terms.
+                    </p>
+                    <p>
+                        8.3.4. The User agrees that the Company is not liable for any fallacy in
+                        the live market value data provided on the Site.
+                    </p>
+                    <p>
+                        8.4. The Content including but not limited to trademarks, trade names,
+                        service marks, logos, software, applications, text, images, graphics, data,
+                        prices, trades, charts, graphs, videos, audio materials, etc. displayed on
+                        the Site are the Company’s property, and therefore should not be copied,
+                        reproduced, modified, posted, transmitted or distributed in an unauthorized
+                        way without the official permission of the Company.
+                    </p>
+                    <p>
+                        8.4.1. The Content cannot be used and/or reproduced for any purpose without
+                        expressing the prior written consent of the Company.
+                    </p>
+                    <p>
+                        8.4.2. The unauthorized use of the content presented on the Site is
+                        strictly prohibited by the copyright, and in case of violation can entail
+                        criminal and/or civil penalties.
+                    </p>
+                    <p>
+                        8.5. The Company supports the protection of intellectual property, and will
+                        encourage Users to submit the copyright violation claims for trademarks and
+                        any material, on which Users hold a bona fide copyright via    <u>support@natcoin.io</u>
+                    </p>
+                    <p>
+                        9. Accounts
+                    </p>
+                    <p>
+                        9.1. Registering an Account on the Platform automatically implies that the
+                        User agrees to the Terms. Registering an Account on the Site will allow the
+                        User to access the full functionality of the Site.
+                    </p>
+                    <p>
+                        9.2. Services, including but not limited to buying or selling
+                        Cryptocurrencies are available to Users who have an Account on the
+                        Platform.
+                    </p>
+                    <p>
+                        9.2.1. The Account is used to store Funds deposited by Users.
+                    </p>
+                    <p>
+                        9.2.2. To complete the Account creation process, Users should provide
+                        personal details, e.g. legal name, address, personal identification
+                        documents, etc. This information is required for your identity verification
+                        and for security reasons.
+                    </p>
+                    <p>
+                        9.2.3. Prior to the completion of your registration form, you agree to
+                        provide valid, accurate, current and complete information about yourself as
+                        requested in the registration form.
+                    </p>
+                    <p>
+                        9.2.4. You additionally agree to maintain your personal information and
+                        update it, informing the Company in the written form or via email of any
+                        changes to your personal and registration data.
+                    </p>
+                    <p>
+                        9.2.5. You agree to keep all your personal information and data provided
+                        upon registration accurate, up-to-date, valid and complete at any time,
+                        during the entire period of using the Platform.
+                    </p>
+                    <p>
+                        9.3. The information provided by the Company via the Site only serves for
+                        the User’s personal non-commercial use.
+                    </p>
+                    <p>
+                        9.4. The Company is concerned with the security of the Site and the
+                        Services.
+                    </p>
+                    <p>
+                        9.5. The User can only register one User Account for personal use on the
+                        Platform.
+                    </p>
+                    <p>
+                        9.5.1. The creation of the additional User Accounts will be suspended with
+                        the termination of the Funds owned by these Accounts.
+                    </p>
+                    <p>
+                        9.5.2. In some cases, the termination of these Accounts may lead to further
+                        actions undertaken by the Company against the User who created the
+                        additional User Accounts in violation of this agreement.
+                    </p>
+                    <p>
+                        9.5.3. Only merchants on the NATCOIN Platform are allowed to register
+                        multiple Merchant Accounts..
+                    </p>
+                    <p>
+                        9.6. The User agrees that he/she will not log in to any Account other than
+                        his/her own, or attempt to access the Account of any other User, alongside
+                        with assisting the others in obtaining such unauthorized access.
+                    </p>
+                    <p>
+                        9.7. The User is responsible for maintaining the confidentiality of the
+                        personal information held within his/her Account, including, but not
+                        limited to, password, email, Wallet address, balance, etc. In case the
+                        Company suspects any malicious activity executed from the User’s Account,
+                        he/she may be required to provide the additional information e.g. e-mail
+                        verification, identity documents, proof of residency, etc.
+                    </p>
+                    <p>
+                        9.7.1. The User’s Account can be frozen during the review time.
+                    </p>
+                    <p>
+                        9.7.2. The User is obliged to accept termination of the Account or to
+                        comply with the security requests.
+                    </p>
+                    <p>
+                        9.8. In case the User’s Account hasn’t been in use for more than 12 months,
+                        it will be qualified as abandoned.
+                    </p>
+                    <p>
+                        9.8.1. The abandoned Accounts with no Funds on their balances will be
+                        deactivated.
+                    </p>
+                    <p>
+                        9.9. The User will be notified about the deactivation of his/her Account by
+                        the Company 10 days in advance, leaving a User the right to withdraw the
+                        Funds prior to such deactivation.
+                    </p>
+                    <p>
+                        10. User Verification
+                    </p>
+                    <p>
+                        10.1. The User verification procedure (also known as 'Know Your Customer'
+                        or 'KYC' for short) is a compulsory procedure for all Fiat currency
+                        Transactions.
+                    </p>
+                    <p>
+                        10.2. Users are required to provide the Company with the correct, relevant
+                        and up-to-date information.
+                    </p>
+                    <p>
+                        10.2.1. In case the data provided by the User is incorrect or unreliable
+                        he/she can become subject for investigation as a suspect in the fraudulent
+                        activity.
+                    </p>
+                    <p>
+                        10.3. The User thus authorizes the Company to, directly or indirectly (via
+                        a third party), undertake the necessary inquiries concerning the accuracy
+                        of the provided information.
+                    </p>
+                    <p>
+                        10.4. To register a new account, the user needs to fill in the email
+                        address and his/her full name. The application will send a confirmation via
+                        e-mail, in which the user will be required to click on the information
+                        link, before he/she would be able to access the account.
+                    </p>
+                    <p>
+                        10.5. The KYC levels available on COSS are:
+                    </p>
+                    <p>
+                        10.5.1 Basic
+                    </p>
+                    <p>
+                        a. Requirements:
+                    </p>
+                    <ul>
+                        <li>
+                            E-mail address verification;
+                        </li>
+                    </ul>
+                    <p>
+                        b. Benefits:
+                    </p>
+                    <ul>
+                        <li>
+                            &lt;$50 trading volume;
+                        </li>
+                    </ul>
+                    <p>
+                        10.5.2 Basic Plus
+                    </p>
+                    <p>
+                        a. Requirements
+                    </p>
+                    <ul>
+                        <li>
+                            E-mail address verification;
+                        </li>
+                    </ul>
+                    <p>
+                        · Proof of identity (submitting an identity document with a picture);
+                    </p>
+                    <ul>
+                        <li>
+                            Proof of residency (utility bill or bank statement);
+                        </li>
+                        <li>
+                            Personal information;
+                        </li>
+                    </ul>
+                    <p>
+                        b. Benefits
+                    </p>
+                    <ul>
+                        <li>
+                            Trading volume &lt; $30,000 per day;
+                        </li>
+                    </ul>
+                    <p>
+                        · Option to withdraw and deposit both cryptocurrency and FIAT;
+                    </p>
+                    <p>
+                        10.5.3 Basic Ultra
+                    </p>
+                    <p>
+                        a. Requirements:
+                    </p>
+                    <ul>
+                        <li>
+                            E-mail address verification;
+                        </li>
+                    </ul>
+                    <p>
+                        · Proof of identity (submitting an identity document with a picture);
+                    </p>
+                    <ul>
+                        <li>
+                            Proof of residency (utility bill or bank statement);
+                        </li>
+                        <li>
+                            Personal information;
+                        </li>
+                        <li>
+                            Video conference with the NATCOIN compliance team;
+                        </li>
+                    </ul>
+                    <p>
+                        b. Benefits:
+                    </p>
+                    <ul>
+                        <li>
+                            Unlimited trading volume
+                        </li>
+                    </ul>
+                    <p>
+                        10.6 All KYC requirements on NATCOIN are in sync with the laws of Singapore
+                        and australia.
+                    </p>
+                    <p>
+                        11. Anti-Money Laundering Policy
+                    </p>
+                    <p>
+                        11.1. NATCOIN tracks each user’s transactions and data within the platform
+                        in order to comply with the Anti-Money Laundering (“AML”) rules. In order
+                        to follow the AML rules, the Platform has the following setup mechanisms:
+                    </p>
+                    <p>
+                        · Collecting the information about all login attempts and IP addresses from
+                        users;
+                    </p>
+                    <p>
+                        · Screening for and reporting multiple accounts registered by the same user
+                        by comparing names, addresses and IP addresses;
+                    </p>
+                    <p>
+                        · Collecting trading history, deposit and withdrawal addresses from all
+                        users.
+                    </p>
+                    <p>
+                        11.2. For enhanced security, NATCOIN implements services from CoinFirm, a
+                        company that offers AML blockchain solutions. All incoming transactions on
+                        COSS are screened, and if the receiving users’ wallets have ever been
+                        involved in illegal activities, the deposited funds will be rejected. This
+                        advanced security feature guarantees trading safely to NATCOIN customers.
+                    </p>
+                    <p>
+                        12. Transactions
+                    </p>
+                    <p>
+                        12.1. The Platform allows the User to create Orders for purchasing and
+                        selling Cryptocurrencies.
+                    </p>
+                    <p>
+                        12.2. The User understands and accepts the risks related to the submission
+                        of the Order.
+                    </p>
+                    <p>
+                        12.2.1. The User agrees that the executed Order is irreversible, and thus
+                        cannot be cancelled.
+                    </p>
+                    <p>
+                        12.2.2. The Order is executed instantly and automatically once the Buyer's
+                        and the Seller's requirements match, without notifying the Buyer and the
+                        Seller.
+                    </p>
+                    <p>
+                        12.3. The User understands and accepts that Deposits and Withdrawals in
+                        Fiat currencies are subject to delays caused by the bank verification
+                        process, and may take from several hours to several days.
+                    </p>
+                    <p>
+                        12.3.1. The User understands and accepts that depositing and withdrawing
+                        Cryptocurrencies may take from several hours to several days.
+                    </p>
+                    <p>
+                        12.4. The unauthorized Users cannot withdraw Cryptocurrencies.
+                    </p>
+                    <p>
+                        12.5. In case the User suspects any activity on his/her Account that he/she
+                        didn’t initiate, the User must immediately notify the Company and follow
+                        the provided instructions.
+                    </p>
+                    <p>
+                        12.5.1. The Company reserves the right to freeze such an Account for any
+                        period of time required to carry out the investigation.
+                    </p>
+                    <p>
+                        12.6. The executed Withdrawal Transaction can be recalled and/or reversed
+                        by the Company upon request from the financial institution, e.g. a bank. In
+                        this situation, the User will be obliged to cooperate with the Company for
+                        the sake of the investigation.
+                    </p>
+                    <p>
+                        13. Transaction Fee
+                    </p>
+                    <p>
+                        13.1. All transactions on the Platform are subject to fees (Transaction
+                        Fee) charged as a compensation for the Services, provided to Users on the
+                        Site.
+                    </p>
+                    <p>
+                        13.1.1. The information about Transaction Fees is available on the Site.
+                    </p>
+                    <p>
+                        13.2. The Company can change and increase the amount of Transaction Fees at
+                        any time for various reasons.
+                    </p>
+                    <p>
+                        13.2.1. Any such changes will make an immediate effect upon the functioning
+                        of the Platform and the Site.
+                    </p>
+                    <p>
+                        13.3. Transaction Fees are charged equally from both the buyers and the
+                        sellers who use the NATCOIN Exchange Services.
+                    </p>
+                    <p>
+                        13.3.1. Transaction Fees are automatically deducted and charged from
+                        Members’ account balances in accord with the transaction type and the type
+                        of cryptocurrency used.
+                    </p>
+                    <p>
+                        13.3.2. The Company reserves the right to change the Transaction Fees for
+                        each individual cryptocurrency at any given time, without notifying the
+                        Users.
+                    </p>
+                    <p>
+                        13.4. The User agrees to be charged Transaction Fees by the Company for
+                        each Transaction completed on the Platform.
+                    </p>
+                    <p>
+                        13.5. The User should comply with the Transaction Fee rates before
+                        initiating a Transaction.
+                    </p>
+                    <p>
+                        13.5.1. The Company reserves the right to change Transaction Fee rates
+                        whenever it is considered necessary without notifying Users.
+                    </p>
+                    <p>
+                        13.5.2. The information about the updates on the Transaction Fee rates will
+                        be published on the website.
+                    </p>
+                    <p>
+                        13.6. The Transaction Fee is charged automatically, and may vary from for
+                        Crypto and Fiat currencies.
+                    </p>
+                    <p>
+                        13.6.1. The most relevant information about the Transaction Fees charged
+                        from the User will be displayed in a pop-up window when the Transaction is
+                        executed.
+                    </p>
+                    <p>
+                        13.6.2. The Transaction Fees are charged in the chosen Cryptocurrency.
+                    </p>
+                    <p>
+                        13.7. The changes in the Transaction Fees and other charges become
+                        effective the moment they are posted on the Site.
+                    </p>
+                    <p>
+                        14. Deposits
+                    </p>
+                    <p>
+                        14.1. The following information should be taken notice of before the
+                        trading can be initiated:
+                    </p>
+                    <p>
+                        14.1.1. Deposits in Fiat currencies ARE available on the NATCOIN platform
+                        ONLY for the countries listed below:
+                    </p>
+                    <ul type="disc">
+                        <li>
+                            Austria
+                        </li>
+                        <li>
+                            Italy
+                        </li>
+                        <li>
+                            Belgium
+                        </li>
+                        <li>
+                            Latvia
+                        </li>
+                        <li>
+                            Bulgaria
+                        </li>
+                        <li>
+                            Lithuania
+                        </li>
+                        <li>
+                            Croatia
+                        </li>
+                        <li>
+                            Luxembourg
+                        </li>
+                        <li>
+                            Czech Republic
+                        </li>
+                        <li>
+                            Netherlands
+                        </li>
+                        <li>
+                            Denmark
+                        </li>
+                        <li>
+                            Poland
+                        </li>
+                        <li>
+                            Estonia
+                        </li>
+                        <li>
+                            Portugal
+                        </li>
+                        <li>
+                            Finland
+                        </li>
+                        <li>
+                            Romania
+                        </li>
+                        <li>
+                            France
+                        </li>
+                        <li>
+                            Slovakia
+                        </li>
+                        <li>
+                            Germany
+                        </li>
+                        <li>
+                            Slovenia
+                        </li>
+                        <li>
+                            Greece
+                        </li>
+                        <li>
+                            Spain
+                        </li>
+                        <li>
+                            Hungary
+                        </li>
+                        <li>
+                            Sweden
+                        </li>
+                        <li>
+                            Ireland
+                        </li>
+                        <li>
+                            United Kingdom
+                        </li>
+                        <li>
+                            Indonesia
+                        </li>
+                        <li>
+                            Thailand
+                        </li>
+                        <li>
+                            Philippines
+                        </li>
+                        <li>
+                            Malaysia
+                        </li>
+                        <li>
+                            Singapore
+                        </li>
+                        <li>
+                            Vietnam
+                        </li>
+                        <li>
+                            Myanmar
+                        </li>
+                        <li>
+                            Cambodia
+                        </li>
+                        <li>
+                            Laos
+                        </li>
+                        <li>
+                            Brunei
+                        </li>
+                        <li>
+                            China
+                        </li>
+                        <li>
+                            Japan
+                        </li>
+                        <li>
+                            South Korea
+                        </li>
+                        <li>
+                            Taiwan
+                        </li>
+                        <li>
+                            US
+                        </li>
+                        <li>
+                            Canada.
+                        </li>
+                    </ul>
+                    <p>
+                        14.1.2. In case your bank account was not issued by any of the
+                        abovementioned countries, you CANNOT access this option.
+                    </p>
+                    <p>
+                        15. Withdrawals
+                    </p>
+                    <p>
+                        15.1. The Company can change and increase the amount of Withdrawal Fee at
+                        any time for various reasons.
+                    </p>
+                    <p>
+                        15.1.1. Any such changes will make an immediate effect upon the functioning
+                        of the Platform and the Site.
+                    </p>
+                    <p>
+                        15.2.A Fee for the International Transactions charged by NATCOIN is 1% from
+                        the number of Transactions and the Transaction fee charged by the Bank of
+                        the Recipient. .
+                    </p>
+                    <p>
+                        15.2.1. The Transaction Fee of the Bank of the Recipient varies for each
+                        Bank.
+                    </p>
+                    <p>
+                        15.2.2. The actual amount of the Transaction Fee will be charged from each
+                        User individually in accordance with the type of Transaction, the type of
+                        Account (User or Merchant) and the type of cryptocurrency.
+                    </p>
+                    <p>
+                        15.3. Users who suspect that the Transaction Fee has been erroneously
+                        charged from their account balances should notify the Company immediately
+                        providing the required transaction details. Note that claims of errors
+                        exceeding 30 days in age will not be accepted.
+                    </p>
+                    <p>
+                        15.4. Withdrawals on the Platform take place on demand.
+                    </p>
+                    <p>
+                        15.4.1. NATCOIN follows the strict reconciliation processes with its
+                        internal books and records together with the anti-money laundering policy
+                        to protect its Users and their funds from hacking and frauds.
+                    </p>
+                    <p>
+                        15.4.2. Cryptocurrency withdrawals may take up to one business day to be
+                        accomplished and up to three business days to process fiat currency
+                        withdrawals.
+                    </p>
+                    <p>
+                        15.5. Withdrawals from coss.io are subject to fees and cryptocurrency
+                        network/blockchain fees.
+                    </p>
+                    <p>
+                        15.5.1. The amount of the fees is different for each cryptocurrency and is
+                        charged as stated on the site during the withdrawal process.
+                    </p>
+                    <p>
+                        15.5.1.1. Spreads are different for each cryptocurrency and for each
+                        merchant.
+                    </p>
+                    <p>
+                        15.5.1.2. The default Values of the spread will be stated in the merchant's
+                        back-office.
+                    </p>
+                    <p>
+                        15.5.2. The withdrawal Fee for Merchants is 0.5% of the amount transferred
+                        in Cryptocurrency.
+                    </p>
+                    <p>
+                        17. Order Execution
+                    </p>
+                    <p>
+                        17.1. The NATCOIN Platform Services (including cryptocurrency trading) are
+                        only available to registered Users.
+                    </p>
+                    <p>
+                        17.1.1. The exchange orders on the Platform will be fulfilled at the best
+                        possible market price available at the time of the deal.
+                    </p>
+                    <p>
+                        17.1.2. The prices displayed on the mobile applications and the Site are
+                        subject to changes, and therefore cannot be guaranteed to remain unchanged
+                        when the transaction takes place.
+                    </p>
+                    <p>
+                        17.2. You agree that, despite any circumstances, the Company is not
+                        responsible for any delays in filling orders or failures to deliver and
+                        perform them.
+                    </p>
+                    <p>
+                        17.2.1. As soon as the order is filled, you are notified that the action
+                        cannot be reversed by the Platform.
+                    </p>
+                    <p>
+                        17.3 Extract profits by exploiting pricing differences across different
+                        products related to the NATCOIN Platform as well as the arbitrage trading
+                        are strictly prohibited.
+                    </p>
+                    <p>
+                        17.3.1. The ongoing trading activities are monitored within the NATCOIN
+                        system, and if Users are suspected in being engaged in illegal trading, any
+                        funds obtained within the platform in this manner will be withheld, while
+                        the User's account can be suspended.
+                    </p>
+                    <p>
+                        17.4. Any software is vulnerable to bugs at any moment in time.
+                    </p>
+                    <p>
+                        17.4.1. We do our best for the optimal maintenance of the NATCOIN Platform,
+                        however, we cannot always preclude the occurrence of bugs and other system
+                        malfunctions from happening.
+                    </p>
+                    <p>
+                        17.4.2. The other system issues may include errors in the software, the
+                        code, the configuration, the hardware, the network, the errors resulted by
+                        the other issues of the system outlined in, but not limited to these Terms.
+                    </p>
+                    <p>
+                        17.4.3. The Company is not responsible for any losses of data, or funds,
+                        caused by the aforementioned malfunctions.
+                    </p>
+                    <p>
+                        17.4.4. Additionally, the Company reserves the right to rollback, revert
+                        any trades or actions from the Users that occurred as a result of either an
+                        intentional or unintentional malfunctioning of the system, that may cause
+                        losses to our business due to the issues in the setting of the system that
+                        could leave an impact on our pricing, quoting, markets, order management
+                        layers of the system (order entry, positions) or any other features
+                        included in the system at the time when the incident occurred.
+                    </p>
+                    <p>
+                        17.5. The Company and its affiliates are not liable for any loss, or damage
+                        incurred by the Users, resulted by their improper utilization of the
+                        Platform, and/or their failure to understand the functioning of virtual
+                        currencies and the markets, on which these virtual currencies operate.
+                    </p>
+                    <p>
+                        17.5.1. The Company represents a medium, which allows Users and members to
+                        exchange, buy, sell, and/or store certain virtual currencies. However, the
+                        Company and its affiliates make no warranties to the value, the use and the
+                        legality of the supported Cryptocurrencies.
+                    </p>
+                    <p>
+                        18. Illegal Activities
+                    </p>
+                    <p>
+                        18.1. The Company reserves the right to suspend or terminate your NATCOIN
+                        Account any time if it reasonably believes that such action is necessary as
+                        required by the law or as demanded by the relevant government authority in
+                        order to prevent the occurrence of financial crimes.
+                    </p>
+                    <p>
+                        18.2. Using the NATCOIN Account for any illegal purposes is strictly
+                        prohibited.
+                    </p>
+                    <p>
+                        18.2.1. Any suspicious activities will be reported by the Company to the
+                        relevant law enforcement institutions.
+                    </p>
+                    <p>
+                        18.3. The User ensures that he/she will not use the NATCOIN Account, the
+                        Site and the Services for criminal and/or unlawful activities, e.g.: money
+                        laundering, terrorist financing, proliferation of weapons of mass
+                        destruction, human trafficking, promotion and/or marketing any illegal
+                        goods or services including, but not limited to violent, obscene, erotic or
+                        pornographic content; marketing and/or promoting services violating
+                        copyrights, property and/or rights of any person, entity or organization;
+                        drugs, narcotics, or hallucinogens; weapons; explosive materials; illegal
+                        gambling services; Ponzi, pyramid or any other ‘get rich quick’ schemes;
+                        harmful media; body parts, organs or human remains; protected animals or
+                        protected plants, etc.
+                    </p>
+                    <p>
+                        19. Security
+                    </p>
+                    <p>
+                        19.1. It is the User’s sole responsibility to keep his/her Account details
+                        (e.g. password, email, Wallet address, balance, etc.) secret from any third
+                        parties or entities.
+                    </p>
+                    <p>
+                        19.2. Any attempts to derive the User’s password by the NATCOIN staff or
+                        any third-party website should be reported to the Company.
+                    </p>
+                    <p>
+                        19.2.1. The NATCOIN staff will never ask the User to disclose his/her
+                        password.
+                    </p>
+                    <p>
+                        19.3. The NATCOIN Platform Users are advised to change the password
+                        regularly (every few months) to prevent the risk of any security breach of
+                        the Account.
+                    </p>
+                    <p>
+                        19.3.1. Users are advised to choose a password that doesn’t contain any
+                        personal information about the User, that can easily be guessed.
+                    </p>
+                    <p>
+                        19.3.2. It is the User’s sole responsibility to ensure that no one is
+                        watching him/her when the Account is being accessed.
+                    </p>
+                    <p>
+                        19.4. In case the User has any concerns about the security of his/her
+                        Account, e.g. the loss or stealth of the login details or password, an
+                        attempt of unauthorized access or other security feature being lost,
+                        stolen, misappropriated, used without authorization, etc. it is recommended
+                        that the User should change the password and contact support immediately.
+                    </p>
+                    <p>
+                        19.5. The Company is not liable for any security breach on the User’s
+                        Account.
+                    </p>
+                    <p>
+                        19.6. In order to advance of security of his/her Account, the User is
+                        advised to enable two-factor authentication.
+                    </p>
+                    <p>
+                        20. Account Termination
+                    </p>
+                    <p>
+                        20.1. The User can close his/her Account voluntary at any time by
+                        contacting <u>support@natcoin.io</u>
+                    </p>
+                    <p>
+                        20.2. The User agrees that the Company can terminate his/her Account, and
+                        deny his/her access to the Site and the Services at its own discretion
+                        without notifying the User of such termination.
+                    </p>
+                    <p>
+                        20.2.1. The termination of the User Account by the Company may include
+                        limitation, suspension or prohibition of access to the Site, its content
+                        and Services.
+                    </p>
+                    <p>
+                        20.2.2. The Company reserves the right to deny User's access to the Site
+                        and the Services without providing any explanations.
+                    </p>
+                    <p>
+                        20.2.3. The Users waive the Company any liability for Account blockage
+                        and/or termination whatsoever.
+                    </p>
+                    <p>
+                        20.3. The termination of the Account by the Company takes place in cases
+                        when the activity from the User’s Account violates the law, these Terms and
+                        the agreement, infringes the intellectual property rights of the Company or
+                        the third parties.
+                    </p>
+                    <p>
+                        20.3.1. The Company may at its sole discretion terminate access to the
+                        User’s Account for:
+                    </p>
+                    <ul type="disc">
+                        <li>
+                            attempting to access the Site and the Services in an unauthorized way
+                            and/or assisting others in such unauthorized access;
+                        </li>
+                    </ul>
+                    <ul type="disc">
+                        <li>
+                            breaking the security features of the software and/or taking advantage
+                            of such breaches;
+                        </li>
+                        <li>
+                            using the NATCOIN Services for any illegal activities (e.g. money
+                            laundering, illegal gambling, terrorism, etc.);
+                        </li>
+                        <li>
+                            any violation of these Terms;
+                        </li>
+                        <li>
+                            avoiding Transaction Fee payments;
+                        </li>
+                        <li>
+                            abusing or threatening other Users and/or Company's staff;
+                        </li>
+                        <li>
+                            any attempts to manipulate the market and/or raise the trading volume
+                            artificially;
+                        </li>
+                        <li>
+                            upon the request of the law enforcement institution or a government
+                            agency.
+                        </li>
+                    </ul>
+                    <p>
+                        20.4. The Company reserves the right to undertake any necessary technical
+                        and/or legal measures to prevent the User’s access to the Site, if the
+                        Company suspects threats or abuses to its intellectual property and
+                        violations of these Terms.
+                    </p>
+                    <p>
+                        20.5. The unconfirmed or inactive Accounts, which haven’t been used for 12
+                        months will also be terminated by the Company.
+                    </p>
+                    <p>
+                        20.5.1. The User waives the Company any liability for such termination.
+                    </p>
+                    <p>
+                        20.6. In case the User, whose Account has been terminated, hasn’t withdrawn
+                        his/her Funds stored on natcoin.io and wants to claim them back, he/she
+                        will be required to provide valid bank account details or a Cryptocurrency
+                        address.
+                    </p>
+                    <p>
+                        20.6.1. The receipt of the remaining Funds may vary and will be disclosed
+                        prior to the withdrawal.
+                    </p>
+                    <p>
+                        20.6.2. The User is responsible for any charges that such a withdrawal may
+                        hold.
+                    </p>
+                    <p>
+                        20.7. The User acknowledges and agrees that his/her Account can be blocked
+                        due to inability and/or denial to provide the required ID documents and/or
+                        any other data necessary for the AML/KYC procedure and/or for any other
+                        reason.
+                    </p>
+                    <p>
+                        20.8. In case of any concerns and/or questions related to the termination
+                        procedure please contact us via <u>support@natcoin.io</u>
+                    </p>
+                    <p>
+                        21. Availability of Services
+                    </p>
+                    <p>
+                        21.1. The COSS Services are provided without guarantees of any sort,
+                        express or implied.
+                    </p>
+                    <p>
+                        21.2. The Company will do its utmost to keep the Site and the Services
+                        running, except for cases when the Platform may suffer from occasional
+                        outages inherent to any online services.
+                    </p>
+                    <p>
+                        21.2.1.In the above situation, the Company will not hold any liability
+                        towards Users for any disruptions or losses they may suffer as a result.
+                    </p>
+                    <p>
+                        21.2.2. The Company does not provide any guarantees for the interrupted
+                        Services and functioning of the Site, including but not limited to delays,
+                        failures, errors, etc.
+                    </p>
+                    <p>
+                        21.3. The Company will undertake to ensure that the User can access the
+                        Site and the Services as usual.
+                    </p>
+                    <p>
+                        21.3.1. The User’s access to the Site and the Services may be suspended for
+                        maintenance reasons, and the Company will notify Users about it if
+                        possible.
+                    </p>
+                    <p>
+                        21.3.2. TThe User acknowledges and agrees that receiving this kind of
+                        notifications stated under paragraph 20.3.1 may not always be possible in
+                        the case of emergency.
+                    </p>
+                    <p>
+                        22. Taxes
+                    </p>
+                    <p>
+                        22.1. The User is obliged to pay all taxes, which may be charged for the
+                        use of the natcoin.io
+                    </p>
+                    <p>
+                        22.1.1. For Services in his/her place of residence as required by the state
+                        regulations.
+                    </p>
+                    <p>
+                        22.2. The Company is not responsible for any violation attempted by the
+                        User to escape from fulfilling his/her tax obligations.
+                    </p>
+                    <p>
+                        22.3. For more information about the taxation on the NATCOIN Platform
+                        please contact the appropriate local authorities and/or accountants.
+                    </p>
+                    <p>
+                        23. Notifications
+                    </p>
+                    <p>
+                        23.1. The Company reserves the right to notify the Users by any means of
+                        communication, available to coss.io, e.g. the contact details provided by
+                        the User.
+                    </p>
+                    <p>
+                        23.2. The User thus agrees to receive notifications from coss.io in the
+                        electronic form.
+                    </p>
+                    <p>
+                        24. Dispute Resolution
+                    </p>
+                    <p>
+                        24.1. These Terms are governed by the laws of Singapore and Australia by
+                        default.
+                    </p>
+                    <p>
+                        24.1.1. All disputes related to the use of the Site and the Services by the
+                        Users governed by these Terms should therefore be submitted to the Court of
+                        Singapore.
+                    </p>
+                    <p>
+                        25. Severability
+                    </p>
+                    <p>
+                        25.1. In case any part of these Terms is deemed invalid or void, it will
+                        not affect the validity and enforceability of the remaining parts of these
+                        Terms and the agreement.
+                    </p>
+                    <p>
+                        25.1. These Terms are governed by the laws of Singapore by default.
+                    </p>
+                    <p>
+                        26. Disclaimer
+                    </p>
+                    <p>
+                        26.1. The Company does not provide Users with any financial, investment or
+                        legal advice by providing its Services and the information on the Site.
+                    </p>
+                    <p>
+                        26.1.1. The information on the price, range, volatility of Cryptocurrencies
+                        and events that have affected the price of Cryptocurrencies provided on the
+                        Site should not be considered as financial, investment or legal advice.
+                    </p>
+                    <p>
+                        26.1.2. The Company is not liable for any risks, losses or damages involved
+                        with the User’s decision to buy or sell Cryptocurrencies via the Platform.
+                    </p>
+                    <p>
+                        26.2. The services coss.io and its partners provide cannot be treated as
+                        financial services, and the products you buy or sell on the NATCOIN
+                        platform therefore cannot be considered as financial products.
+                    </p>
+                    <p>
+                        26.2.1. In turn, the Company cannot be considered as a regulated entity.
+                    </p>
+                    <p>
+                        26.2.2. The Company does not pay interest on funds deposited to the Site to
+                        obtain, exchange and sell digital currencies.
+                    </p>
+                    <p>
+                        26.2.3. The Funds and Cryptocurrency deposits are not insured by the
+                        Company or by any government as such, and that the Company, by definition,
+                        is not a regulated financial institution.
+                    </p>
+                    <p>
+                        26.3. You understand and agree that in the event of technical and other
+                        limitations, the digital currencies’ market values may be displayed by the
+                        Platform with a delay, and therefore may not necessarily reflect the
+                        current, live market value of such currency.
+                    </p>
+                    <p>
+                        26.4. Unless otherwise stated at the time of posting of the information,
+                        neither the Company nor its affiliates guarantee the accuracy,
+                        completeness, or usefulness of any information provided on the Platform.
+                    </p>
+                    <p>
+                        26.4.1. The Company is under no responsibility for the accuracy or
+                        reliability of any advice, statement or opinion made on the Site.
+                    </p>
+                    <p>
+                        26.5. The Company reserves the right, but is not obliged, whether based on
+                        the complaints or on its own initiative, to monitor any malicious messaging
+                        or other illegal activity including posting the materials in the public
+                        areas of the Platform, and reviewing the usage, the activity or the content
+                        of any messages, materials and other information, posted or distributed via
+                        the Site.
+                    </p>
+                    <p>
+                        26.5.1. The Company has the right in its sole discretion to remove any
+                        material or posts, regardless of the Company’s determination whether such
+                        materials or profiles violate the law and this Agreement, or not.
+                    </p>
+                    <p>
+                        26.5.2. Notwithstanding the foregoing, the Company does not monitor,
+                        control or edit any communications between its Members, even in the event
+                        of such communications being offensive to you.
+                    </p>
+                    <p>
+                        26.5.3. You accept the full responsibility and the risks related to the use
+                        of the Services.
+                    </p>
+                    <p>
+                        26.5.4. You are solely responsible for the accuracy and usefulness of the
+                        NAT Services, and the information on the Site.
+                    </p>
+                    <p>
+                        26.5.5. In no event is the Company and/or its affiliates liable for any
+                        incidental, consequential, or indirect damages (e.g. deaths, losses,
+                        threats, injuries committed by any other Users, alongside with the damages
+                        related to the loss of data, software, access to the Platform, the cost of
+                        the Service, interruptions or procurement of the substitute Services)
+                        directly or indirectly arising from the use of the Platform or the
+                        inability to use the Services, even if the Company, its agents or
+                        representatives know or have been informed about the possibility of these
+                        damages.
+                    </p>
+                    <p>
+                        26.5.6. Notwithstanding anything on the contrary to the statements
+                        contained herein, the Company’s liability to you for any cause, and
+                        regardless of the nature of the action, will be limited to the amount paid,
+                        if any, by you, for the above-mentioned Services.
+                    </p>
+                    <p>
+                        26.5.7. The Services are provided without any warranties or conditions of
+                        any kind, express, implied or statutory, in all communication with the
+                        Company, its affiliates and representatives, or otherwise with respect to
+                        the Services.
+                    </p>
+                    <p>
+                        26.5.8. The Company and/or its affiliates specifically disclaim any of the
+                        implied warranties in relation to the merchantability and/or the
+                        non-infringement.
+                    </p>
+                    <p>
+                        26.5.9. The Company and its affiliates cannot warrant that your use of the
+                        Services will be secure, seamless, free of errors, and will meet your
+                        requirements, or that any defects on the Site will be amended.
+                    </p>
+                    <p>
+                        26.5.10 The Company and the affiliates disclaim all and any liability,
+                        regardless of the form of action, for the actions or inactions of other
+                        Members or Users (including unauthorized users, e.g. attackers) of the Site
+                        and the Services.
+                    </p>
+                    <p>
+                        27. Liability Limitations
+                    </p>
+                    <p>
+                        27.1. IN NO EVENT SHALL THE COMPANY, ITS OFFICERS, DIRECTORS, EMPLOYEES,
+                        AGENTS, AND THIRD-PARTY SERVICE PROVIDERS, BE LIABLE TO YOU OR ANY OTHER
+                        PERSON OR ENTITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE,
+                        OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING ANY THAT MAY RESULT FROM:
+                    </p>
+                    <p>
+                        I. THE ACCURACY AND COMPLETENESS OF THE CONTENT ON THE SITE;
+                    </p>
+                    <p>
+                        II. THE ACCURACY AND COMPLETENESS OF THE CONTENT ON THE SITES LINKED TO
+                        COSS.IO (BY MEANS OF HYPERLINKS, BANNER ADS, ETC.);
+                    </p>
+                    <p>
+                        III. THE SERVICES AVAILABLE ON THIS SITE OR ANY OTHER SITES LINKED TO
+                        COSS.IO (BY MEANS OF HYPERLINKS, BANNER ADS, ETC.);
+                    </p>
+                    <p>
+                        IV. PERSONAL INJURIES OR PROPERTY DAMAGES OF ANY KIND;
+                    </p>
+                    <p>
+                        V. THIRD-PARTY CONDUCT OF ANY NATURE WHATSOEVER;
+                    </p>
+                    <p>
+                        VI. ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SERVERS AND/OR CONTENT,
+                        INFORMATION (E.G. PERSONAL, FINANCIAL, ETC.) AND THE STORED DATA;
+                    </p>
+                    <p>
+                        VII. ANY INTERRUPTION OF SERVICES ON THIS SITE OR ANY OTHER SITES LINKED TO
+                        NATCOIN.IO (BY MEANS OF HYPERLINKS, BANNER ADS, ETC.);
+                    </p>
+                    <p>
+                        VIII. ANY VIRUSES, WORMS, BUGS, TROJAN HORSES, OR THE LIKE, WHICH MAY BE
+                        TRANSMITTED TO OR FROM THIS SITE OR ANY SITES LINKED TO NATCOIN.IO (BY
+                        MEANS OF HYPERLINKS, BANNER ADS, ETC.);
+                    </p>
+                    <p>
+                        IX. ANY DEFAMATORY, HARASSING, ABUSIVE, HARMFUL, PORNOGRAPHIC, “X-RATED”,
+                        OBSCENE, ETC. CONTENT;
+                    </p>
+                    <p>
+                        X. ANY LOSSES OR DAMAGES RESULTED BY YOUR USE OF THE SITE AND/OR THE
+                        SERVICES BASED ON WARRANTY, CONTRACT, TORT, OR ANY OTHER LEGAL OR EQUITABLE
+                        THEORY, REGARDLESS OF WHETHER THE COMPANY IS INFORMED ABOUT THE PROBABILITY
+                        OF SUCH DAMAGES. ADDITIONALLY, YOU SPECIFICALLY ACKNOWLEDGE AND AGREE THAT
+                        ANY CAUSE OF ACTION RELATED TO THIS SITE OR THE SERVICES OUGHT TO BE
+                        COMMENCED WITHIN 12 MONTHS SINCE THE CAUSE OF THE ACTION HAS TAKEN PLACE.
+                        IN OTHER SITUATION SUCH CAUSE OF ACTION WILL BE BARRED PERMANENTLY. YOU
+                        SPECIFICALLY ACKNOWLEDGE AND AGREE THAT IN NO EVENT WILL THE COMPANY’S
+                        TOTAL AGGREGATE LIABILITY EXCEED THE TOTAL COSTS PAID BY YOU FOR THE
+                        PARTICULAR SERVICES THAT ARE SUBJECT TO THE CAUSE OF ACTION. THE FOREGOING
+                        LIMITATION OF LIABILITY APPLIES, TO THE FULLEST EXTENT PERMITTED BY THE
+                        LAW, AND WILL SURVIVE ANY TERMINATION OR EXPIRATION OF THIS AGREEMENT, OR
+                        YOUR USE OF THIS SITE OR THE SERVICES.
+                    </p>
+                    <p>
+                        27.2. NATCOIN.IO IS NOT LIABLE FOR TRANSACTIONS INITIATED BY THE USER BELOW
+                        THE DEFAULT VALUES PRESCRIBED BY THE COMPANY.
+                    </p>
+                    <p>
+                        28. Indemnity
+                    </p>
+                    <p>
+                        28.1. The User agrees to hold Natcoin.io, its officers, directors,
+                        employees, agents, and third-party service providers harmless from any
+                        claims, demands, costs, expenses, losses, liabilities and damages of any
+                        nature (including, without limitation, attorneys’ fees) incurred by the
+                        Company, directly or indirectly, from:
+                    </p>
+                    <ul type="disc">
+                        <li>
+                            the utilization of the Site, the Services and the Account by the User;
+                        </li>
+                        <li>
+                            the violation of these Terms and the agreement by the User;
+                        </li>
+                        <li>
+                            the violation of any third-party right, e.g. intellectual property,
+                            etc. by the User.
+                        </li>
+                    </ul>
+                    <p>
+                        28.2. The indemnity obligations endure any termination or expiration of
+                        these Terms.
+                    </p>
+                    <p>
+                        29. Amendments
+                    </p>
+                    <p>
+                        29.1. Natcoin.io can modify or amend any part of these Terms any time.
+                    </p>
+                    <p>
+                        29.1.1. The revised version of these Terms will be published on this page
+                        and will become effective from the moment of publication.
+                    </p>
+                    <p>
+                        29.2. It is the User's sole responsibility to stay updated with the
+                        amendments, to accept them and to agree to them.
+                    </p>
+                    <p>
+                        29.2.1. If the User does not agree with any amendments, he/she should
+                        terminate the use of the Services, the Account and the Site.
+                    </p>
+                    <p>
+                        29.3. The User acknowledges and agrees that the Company is not liable to
+                        the User for any risks, damages or losses caused by these amendments.
+                    </p>
+                    <p>
+                        30. Force Majeure
+                    </p>
+                    <p>
+                        30.1. In case the Company cannot perform the Services outlined in these
+                        Terms due to factors beyond its control including, but not limited to Force
+                        Majeure situations, the Company will not be responsible for the inability
+                        to provide its Services to the User for the entire period of the Force
+                        Majeure event.
+                    </p>
+                    <p>
+                        31. Links to Third-Party Websites
+                    </p>
+                    <p>
+                        31.1. The Site may contain links to third-party websites that are not owned
+                        or controlled by the Company.
+                    </p>
+                    <p>
+                        31.1.1. Natcoin.io is under no responsibility for the content, including
+                        but not limited to the terms of use, privacy policies, etc. of the
+                        third-party websites.
+                    </p>
+                    <p>
+                        31.2. Natcoin.io does not censor and/or modify the content of any
+                        third-party websites.
+                    </p>
+                    <p>
+                        31.3. The User releases the Company from liability for any third-party
+                        websites.
+                    </p>
+                    <p>
+                        32. Support
+                    </p>
+                    <p>
+                        30.1. Any questions or concerns related to these Terms, Users’ rights
+                        and/or obligations, etc. can be addressed after submitting a written
+                        request to and contacting
+                    </p>
+                    <u>support@natcoin.io</u>
+                    <p>
+                        .
+                    </p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+                <button class="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i class="fa fa-check"></i> I agree</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Terms Modal -->
+
+<!-- Register Footer -->
+<div class="push-10-t text-center animated fadeInUp">
+    <small class="text-muted font-w600" ng-bind-html="copyright"></small>
+</div>
+<!-- END Register Footer -->

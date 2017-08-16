@@ -1,0 +1,178 @@
+<div data-ng-controller="WalletCtrl">
+<div class="content bg-gray-lighter">
+
+
+    <div class="row" ng-show="enviroment=='development'">
+        <div class="col-lg-4">
+            <a class="block block-link-hover3" href="javascript:void(0)">
+                <div class="block-content block-content-full clearfix">
+                    <i class="si si-envelope fa-2x text-muted pull-right"></i>
+                    <span class="h4 font-w700">5</span> <span class="h4 text-muted">messages</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4">
+            <a class="block block-link-hover3" href="javascript:void(0)">
+                <div class="block-content block-content-full clearfix">
+                    <i class="si si-users fa-2x text-muted pull-right"></i>
+                    <span class="h4 font-w700">15k</span> <span class="h4 text-muted">users</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4">
+            <a class="block block-link-hover3" href="javascript:void(0)">
+                <div class="block-content block-content-full clearfix">
+                    <i class="si si-user-follow fa-2x text-muted pull-right"></i>
+                    <span class="h4 font-w700">12</span> <span class="h4 text-muted">clients</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row items-push">
+        <div class="col-sm-7">
+            <h1 class="page-heading">
+                Wallet <small ng-show="enviroment=='development'">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</small>
+            </h1>
+        </div>
+        <div class="col-sm-5 text-right hidden-xs">
+            <ol class="breadcrumb push-10-t">
+                <li>NAT Coin</li>
+                <li><a class="link-effect" href="">Wallet</a></li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Success Alert -->
+            <div class="alert alert-success alert-dismissable">
+                <i class="si si-badge"></i>
+                Crowdfunding <strong>Phase #1</strong>, current Natcoin token price: $ <strong>0.80</strong>
+            </div>
+            <!-- END Success Alert -->
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-sm-12 col-lg-4">
+            <a class="block block-rounded block-link-hover3" href="javascript:void(0)">
+                <div class="block-content block-content-full clearfix">
+                    <div class="pull-right">
+                        <img class="img-avatar" src="assets/img/avatars/NatcoinAvatar.png" alt="">
+                    </div>
+                    <div class="pull-left push-10-t">
+                        <div class="font-w600 push-5">NTC/NatCoin</div>
+                        <div class="text-muted">{{balanceNumber}}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-sm-12 col-lg-4">
+            <a class="block block-rounded block-link-hover3" href="javascript:void(0)">
+                <div class="block-content block-content-full clearfix">
+                    <div class="pull-right">
+                        <i class="fa cc-ETH fa-4x"></i>
+                    </div>
+                    <div class="pull-left push-10-t">
+                        <div class="font-w600 push-5">ETH/Ethereum</div>
+                        <div class="text-muted">{{balanceEther}}</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+            <a class="block block-rounded block-link-hover3" href="javascript:void(0)">
+                <div class="block-content block-content-full clearfix">
+                    <div class="pull-right">
+                        <i class="fa cc-BTC fa-4x"></i>
+                    </div>
+                    <div class="pull-left push-10-t">
+                        <div class="font-w600 push-5">BTC/Bitcoin</div>
+                        <div class="text-muted">0</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-lg-7">
+            <div class="block block-themed">
+                <div class="block-header bg-primary-light">
+                    <div class="block-options-simple">
+                        <div class="btn-group" data-toggle="buttons">
+                            <button class="btn btn-xs btn-default" type="button" ng-click="createWalletfromPrivateKey()">Open Wallet</button>
+                            <button class="btn btn-xs btn-success" type="button">Deposit</button>
+                            <button class="btn btn-xs btn-warning" type="button">Withdraw</button>
+                        </div>
+                    </div>
+                    <h3 class="block-title">Wallet</h3>
+                </div>
+                <div class="block-content">
+                    <p>
+                        <strong>Address</strong><br/>{{accountAddress}}<br/>
+                        <strong>Private Key</strong><br/>{{accountPrivate}}<br/>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-5">
+            <div class="block block-themed">
+                <div class="block-header bg-primary-light">
+                    <div class="block-options-simple">
+                        <div class="btn-group" data-toggle="buttons">
+                            <button class="btn btn-xs btn-success" type="button" ng-click="claimNTC()">Claim your NTC</button>
+                        </div>
+                    </div>
+                    <h3 class="block-title">Our Crowdsale Address</h3>
+                </div>
+                <div class="block-content">
+                    <p>
+                    <strong>Ethereum Address</strong>, send here to get NTC (1 ETH = 300 NTC)<br/>
+                    {{crowdsaleAddress}}<br/>
+                    <strong>Bitcoin Address</strong>, send here to buy NTC via Bitcoin<br/>
+                        1Aeerix69FPWGXP6zptLmya9KL2HxxHJUv<br/>
+                    <strong>Token Address</strong>, use this to see NTC balance in other ether wallet<br/>
+                    {{tokenAddress}}<br/>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 col-lg-12">
+            <!-- Default Table -->
+            <div class="block">
+                <div class="block-header">
+                    <h3 class="block-title">Pending Transaction</h3>
+                </div>
+                <div class="block-content">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th class="text-center" style="width: 50px;">#</th>
+                            <th>Transaction</th>
+                            <th class="text-center" style="width: 100px;">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="hashNumber in pendingTransactions track by $index">
+                            <td class="text-center">{{$index+1}}</td>
+                            <td>{{hashNumber}}</td>
+                            <td class="text-center">
+                                <div class="btn-group">
+                                    <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="" data-original-title="Show Detail"><i class="si si-bulb"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END Default Table -->
+        </div>
+    </div>
+
+</div>
+</div>

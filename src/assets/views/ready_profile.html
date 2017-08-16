@@ -1,0 +1,91 @@
+<!-- Page Header -->
+<div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
+    <div class="push-50-t push-15">
+        <h1 class="h2 text-white animated zoomIn">Profile</h1>
+        <h2 class="h5 text-white-op animated zoomIn">Welcome {{profileData.firstname || userData.name}}</h2>
+    </div>
+</div>
+<!-- END Page Header -->
+
+<!-- Page Content -->
+<div class="content">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Profile Form -->
+            <div class="block block-themed">
+                <div class="block-header bg-success">
+                    <ul class="block-options">
+                        <li>
+                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                        </li>
+                        <li>
+                            <button type="button" data-toggle="block-option" data-action="content_toggle"><i class="si si-arrow-up"></i></button>
+                        </li>
+                    </ul>
+                    <h3 class="block-title">Profile</h3>
+                </div>
+                <div class="block-content">
+                    <form class="form-horizontal push-5-t">
+                        <div class="form-group">
+                            <label class="col-xs-12" for="register1-firstname">Firstname</label>
+                            <div class="col-xs-12">
+                                <input ng-model="profile.firstname" class="form-control" id="register1-firstname" name="firstname" placeholder="Enter your Firstname.." type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12" for="register1-lastname">Lastname</label>
+                            <div class="col-xs-12">
+                                <input ng-model="profile.lastname" class="form-control" id="register1-lastname" name="lastname" placeholder="Enter your Lastname.." type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12" for="register1-email">Email</label>
+                            <div class="col-xs-12">
+                                <input ng-model="userData.email" disabled class="form-control" id="register1-email" name="register1-email" placeholder="Enter your email.." type="email">
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="enviroment == 'development'">
+                            <label class="col-xs-12" for="register1-password">Password</label>
+                            <div class="col-xs-12">
+                                <input class="form-control" id="register1-password" name="register1-password" placeholder="Enter your password.." type="password">
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="enviroment == 'development'">
+                            <label class="col-xs-12" for="register1-password2">Confirm Password</label>
+                            <div class="col-xs-12">
+                                <input class="form-control" id="register1-password2" name="register1-password2" placeholder="Confirm your password.." type="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <button ng-click="submitProfile(this)" class="btn btn-sm btn-success" ><i class="fa fa-save push-5-r"></i> Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- END Profile Form-->
+        </div>
+        <div class="col-lg-4">
+            <!-- Referal Code -->
+            <div class="block block-themed " ng-class="{'block-opt-refresh' : loadingTrackerReferalCode.active()}">
+                <div class="block-header bg-success">
+                    <h3 class="block-title">Your Referal Code</h3>
+                </div>
+                <div class="block-content">
+                    <form class="form-horizontal push-5-t">
+                        <div class="form-group">
+                            <label class="col-xs-12"><strong>Short Referal Link</strong></label>
+                            <div class="col-xs-12">
+                                <a href="{{shortLink}}" raget="_blank">{{shortLink}}</a>
+                            </div>
+                            <div class="help-block text-right">Use this short referal link for registering your friend.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- END Referal Code-->
+        </div>
+    </div>
+</div>
+<!-- END Page Content -->

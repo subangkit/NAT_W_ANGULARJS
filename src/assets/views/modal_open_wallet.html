@@ -1,0 +1,26 @@
+<div class="block block-themed block-transparent remove-margin-b">
+    <div class="block-header bg-primary-dark">
+        <ul class="block-options">
+        </ul>
+        <h3 class="block-title">Open Wallet</h3>
+    </div>
+    <div class="block-content">
+        <p><strong>Hi, {{$ctrl.displayName}}</strong>. to start using NTC you need wallet to save your token.</p>
+        <form class="form-horizontal push-5-t" action="base_forms_premade.html" method="post" onsubmit="return false;">
+            <div class="form-group">
+                <label class="col-xs-12" for="contact1-email">Private Key</label>
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <input ng-model="$ctrl.privatekey" class="form-control" id="contact1-email" name="contact1-email" placeholder="Enter your private key..">
+                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                    </div>
+                    <div class="help-block">You can get your private key from previous wallet.</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-sm btn-primary" type="button" data-dismiss="modal" ng-click="$ctrl.ok()"><i class="fa fa-check"></i> Open Wallet</button>
+</div>
+

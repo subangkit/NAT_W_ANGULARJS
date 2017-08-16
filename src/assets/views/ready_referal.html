@@ -1,0 +1,139 @@
+<!-- Page Header -->
+<div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
+    <div class="push-50-t push-15">
+        <h1 class="h2 text-white animated zoomIn">Profile</h1>
+        <h2 class="h5 text-white-op animated zoomIn">Welcome {{profileData.firstname || userData.name}}</h2>
+    </div>
+</div>
+<!-- END Page Header -->
+
+<!-- Page Content -->
+<div class="content">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Default Table -->
+            <div class="block" ng-class="{'block-opt-refresh' : loadingTrackerReferal.active()}">
+                <div class="block-header">
+                    <h3 class="block-title">Referal Tree View</h3>
+                </div>
+                <div class="block-content">
+                    <!-- Simple Tree -->
+                    <div class="block">
+                        <div class="block-header bg-gray-lighter">
+                            <h3 class="block-title">Upline</h3>
+                        </div>
+                        <div class="block-content">
+                            <!-- Tree View Container -->
+                            <tree-grid
+                                    tree-data     = "upTreeData"
+                                    col-defs      = "col_defs_upline"
+                                    icon-leaf     = "fa fa-user"
+                                    icon-expand   = "fa fa-folder-o"
+                                    icon-collapse = "fa fa-folder-open-o"
+                                    on-click      = "showDetail(branch)"
+                                    expand-level  = "2"
+                                    template-url  = "treeGridTemplate.html"
+                            >
+                            </tree-grid>
+                        </div>
+                    </div>
+
+                    <!-- END Simple Tree -->
+                    <!-- Simple Tree -->
+                    <div class="block">
+                        <div class="block-header bg-gray-lighter">
+                            <h3 class="block-title">Downline</h3>
+                        </div>
+                        <div class="block-content">
+                            <!-- Tree View Container -->
+                            <tree-grid
+                                    tree-data     = "downTreeData"
+                                    col-defs      = "col_defs_downline"
+                                    icon-leaf     = "fa fa-user"
+                                    icon-expand   = "fa fa-folder-o"
+                                    icon-collapse = "fa fa-folder-open-o"
+                                    on-click      = "showDetail(branch)"
+                                    expand-level  = "2"
+                                    template-url  = "treeGridTemplate.html"
+                            >
+                            </tree-grid>
+                        </div>
+                    </div>
+                    <!-- END Simple Tree -->
+                </div>
+            </div>
+            <!-- END Default Table -->
+        </div>
+        <div class="col-lg-4">
+            <!-- Referal Code -->
+            <div class="block block-themed " ng-class="{'block-opt-refresh' : loadingTrackerReferalCode.active()}">
+                <div class="block-header bg-success">
+                    <h3 class="block-title">Your Referal Code</h3>
+                </div>
+                <div class="block-content">
+                    <form class="form-horizontal push-5-t">
+                        <div class="form-group">
+                            <label class="col-xs-12" for="referalCode"><strong>Referal Code</strong></label>
+                            <div class="col-xs-12">
+                                <textarea disabled class="form-control" id="referalCode" name="referalCode" type="text" wrap="hard" style="height: 75px">{{referalCode}}</textarea>
+                            </div>
+                            <div class="help-block text-right">Referal Code can use for registrating other user ex: {{referalLinkExample}}</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12" for="referalCode"><strong>Registration Link</strong></label>
+                            <div class="col-xs-12">
+                                <a href="{{referalLink}}">Registration Form</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-12" for="referalCode"><strong>Short Referal Link</strong></label>
+                            <div class="col-xs-12">
+                                <strong>{{shortLink}}</strong>
+                            </div>
+                            <div class="help-block text-right">Use this short referal link for registering your friend.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- END Referal Code-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-lg-12">
+
+        </div>
+    </div>
+</div>
+<!-- END Page Content -->
+<script type="text/ng-template" id="treeGridTemplate.html">
+    <div class="table-responsive">
+        <table class="table tree-grid">
+            <thead>
+            <tr>
+                <th>{{expandingProperty.displayName || expandingProperty.field || expandingProperty}}</th>
+                <th ng-repeat="col in colDefinitions"> {{col.displayName || col.field}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in tree_rows | filter:{visible:true} track by row.branch.uid"
+                ng-class="'level-' + {{ row.level }} + (row.branch.selected ? ' active':'')" class="tree-grid-row">
+                <td>
+                    <a ng-click="user_clicks_branch(row.branch)"><i ng-class="row.tree_icon"
+                                                                    ng-click="row.branch.expanded = !row.branch.expanded"
+                                                                    class="indented tree-icon"></i>
+                    </a>
+                    <span ng-if="expandingProperty.cellTemplate" class="indented tree-label" ng-click="on_user_click(row.branch)"  compile="expandingProperty.cellTemplate">
+           </span>
+                    <span ng-if="!expandingProperty.cellTemplate" class="indented tree-label" ng-click="on_user_click(row.branch)">
+                 {{row.branch[expandingProperty.field] || row.branch[expandingProperty]}}
+           </span>
+                </td>
+                <td ng-repeat="col in colDefinitions" style="width:100px;">
+                    <div ng-if="col.cellTemplate" compile="col.cellTemplate"></div>
+                    <div ng-if="!col.cellTemplate">{{row.branch[col.field]}}</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
